@@ -92,5 +92,3 @@ Você pode evoluir este projeto adicionando:
 Este projeto é livre para estudo e modificação.
 
 ---
-
-Se quiser, posso adicionar GIF de demonstração, cores, instruções avançadas ou transformar isso em um projeto mais robusto! 🚀
