@@ -29,11 +29,16 @@ def cadastrar_usuario():
     with open("Cadastros.txt", "a") as arquivo:
         usuario_novo_usuario = str(input("Nome de Usuario: "))
         senha_novo_usuario = str(input("Nova Senha: "))
-        confirmacao_senha_usuario = str(input("Confirma Senha: "))
-        if confirmacao_senha_usuario == senha_novo_usuario:
-            arquivo.write(f"{usuario_novo_usuario};{senha_novo_usuario}" + '\n')
+        
+        if len(senha_novo_usuario) >= 4: # para verificar se a senha tem 4 ou mais caracter
+            confirmacao_senha_usuario = str(input("Confirma Senha: "))
+            
+            if confirmacao_senha_usuario == senha_novo_usuario: # para confirmar a senha
+                arquivo.write(f"{usuario_novo_usuario};{senha_novo_usuario}" + '\n')
+            else:
+                input("Senhas não parecidas")
         else:
-            print("Senhas não parecidas")
+            input("A senha precisa ter mais do que 4")
 
 
 
